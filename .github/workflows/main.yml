@@ -32,4 +32,5 @@ jobs:
 
     - name: Run Flask App
       run: |
-        poetry run flask run --host=0.0.0.0
+        python -m flask run --host=0.0.0.0 & echo "::set-output name=app-url::http://localhost:5000"
+      id: flask
