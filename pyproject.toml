@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "dummyProject"
+version = "0.1"
+description = "NA"
+authors = ["Meghna Chakraborty"]
+license = "NA"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.0"
+Flask = "3.0.2"
+waitress = "^3.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
