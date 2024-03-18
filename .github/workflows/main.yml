@@ -21,8 +21,15 @@ jobs:
     - name: Install Poetry
       run: |
         curl -sSL https://install.python-poetry.org | python3 -
-        source $HOME/.poetry/env
+        
+    - name: Add Poetry to PATH
+      run: |
+        export PATH="$HOME/.poetry/bin:$PATH"
 
+    - name: Verify Poetry installation
+      run: |
+        poetry --version
+        
     - name: Install dependencies
       run: |
         python3 -m poetry install --no-root
